@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Weather Details" icon-name="action:map">
+        <div class="card">
+            <h1 class="slds-text-align_center slds-text-heading_large slds-var-m-bottom_large">City Weather Details</h1>
+            
+            <lightning-input 
+                class="slds-var-p-around_large"
+                label="City" 
+                placeholder="Enter city name" 
+                required
+                onchange={handleInputChange}>
+            </lightning-input>
+
+            <lightning-button 
+                variant="brand" 
+                class="slds-var-m-around_large" 
+                label="Get Weather Details" 
+                onclick={handleWeatherDetails}>
+            </lightning-button>
+
+            <template lwc:if={showWeatherDetails}>
+                <div class="weather-info">
+                    <p>Local Time: {weatherDetails.localTime}</p>
+                    <div class="weather-info__image">
+                        <img src={weatherDetails.icon} alt="Weather icon">
+                        <span>{weatherDetails.cityName}</span>
+                    </div>
+                    <p>{weatherDetails.currentText}</p>
+                    <p>Temperature: {weatherDetails.temperature}</p>
+                    <p>Pressure: {weatherDetails.pressure}</p>
+                    <p>Humidity: {weatherDetails.humidity}</p>
+                    <p>Feels Like: {weatherDetails.feelsLike}</p>
+                </div>
+            </template>
+
+            <template if:true={errorMessage}>
+                <div class="slds-text-color_error slds-var-m-top_medium">{errorMessage}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

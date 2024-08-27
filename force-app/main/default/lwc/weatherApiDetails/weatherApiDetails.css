@@ -1,0 +1,53 @@
+.card {
+    background-color: #f4f6f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #0070d2;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.weather-info p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.weather-info__image {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.weather-info__image img {
+    max-width: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.weather-info__image span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0070d2;
+}
+
+.slds-text-color_error {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
